@@ -56,28 +56,33 @@ def scan2_show():
 
 
 
-def scan(dir_name="D:\\",whitelist=[]):
+def scan(dir_name="D:\\",whitelist=[],lengthofFuzzy=0):
     outputList=[]
     for drive in dir_name:
         for itemParent in os.listdir(drive):
+          #print itemParent
           try:
               from exceptions import WindowsError
               if os.path.isdir(os.path.join(drive,itemParent)):
                 for item1 in os.listdir(os.path.join(drive,itemParent)):
                  #print (drive,itemParent,item1)
-                 if item1 in whitelist:
+                 if any(item1.lower() in word for word in whitelist) and len(item1)>lengthofFuzzy:
                         #WindowsError: [Error 5] Access is denied: 'D:\\$RECYCLE.BIN\\S-1-5-21-1842349746-1869193258-3302827637-1002/*.*' 
+                            print ("MATCHED directory name"+item1)
                             outputList.append(os.path.join(drive,itemParent, item1))
                             
                  if os.path.isdir(os.path.join(drive,itemParent,item1)):
         
                   for item in os.listdir(os.path.join(drive,itemParent,item1)) :  # would have exception because of file fed into listdir(): WindowsError: [Error 267] The directory name is invalid: 'D:\\GoodDNS_record.txt/*.*'
-                    if os.path.isfile(os.path.join(drive,itemParent,item1, item)) and item in whitelist:
+                      if os.path.isfile(os.path.join(drive,itemParent,item1, item)) and item in whitelist:
                         #WindowsError: [Error 5] Access is denied: 'D:\\$RECYCLE.BIN\\S-1-5-21-1842349746-1869193258-3302827637-1002/*.*' 
+                            print ("MATCHED l2"+item)
                             outputList.append(os.path.join(drive,itemParent,item1, item))
-                            
+              elif itemParent.lower() in whitelist:
+                                   outputList.append(os.path.join(drive,itemParent))
+                                   print ("MATCHED root")
           except WindowsError, e:
-                      logging.warning(os.path.isdir(os.path.join(drive,itemParent)))
+                      #logging.warning(os.path.isdir(os.path.join(drive,itemParent)))
                       if sys.platform.startswith('win'):
                           if isinstance(e, WindowsError) and e.winerror == 267:
                               logging.warning("custom err1")#raise InvalidFile, ('uses Windows special name (%s)' % e)
@@ -127,33 +132,66 @@ class HelloWorld(tk.Tk):
             print("Hello World 2")
         elif answer == "c":
             root.destroy()
+
+def savetodisk(listname,diskid="disk param1",destname="d:\\tmp\\list.txt"):
+    thefile=open(destname,'w')
+    for item in listname:
+      thefile.write("%s\n" % item)
+
 def saveoutput(outputpath=sys.path[0],listname=[]):
 
+    from collections import defaultdict
+    
+    D = defaultdict(list)
+
+    listname_lastsection=set([x.split("\\")[-1] for x in listname])
+    for i,item in enumerate(listname_lastsection):
+      D[item].append(i)
+    D = {k:v for k,v in D.items() if len(v)>1}
+
+    logging.warning("Saving"+str(listname))
+    savetodisk(listname)
+    cnt=-1
     for fileitem in listname:
-     
-           #print fileitem.encode('string-escape')
-           print(os.path.join(outputpath,fileitem.rsplit("\\")[2]).encode('string-escape'))
-           shutil.copyfile(fileitem.encode('string-escape'),os.path.join(outputpath,fileitem.split("\\")[-1]).encode('string-escape'))
+         
+        cnt=cnt+1
+        insert_unique=""
+        try:
+          from exceptions import WindowsError
+              
+
+          # don't write self
+          if fileitem.encode('string-escape') != os.path.join(outputpath,fileitem.split("\\")[-1]).encode('string-escape'):
+             if fileitem in D:
+                insert_unique=string.replace(fileitem,"\\","_")
+
+             shutil.copyfile(fileitem.encode('string-escape'),os.path.join(outputpath,insert_unique+fileitem.split("\\")[-1]).encode('string-escape'))
+        except IOError, e:
+                          
+                                  logging.warning(e)#raise 
+        except:
+          print "Unexpected error:", sys.exc_info()[0]
+          raise       
+
 
 
 
 def main():
-  runlist=["wall.txt",r"bit.txt","Filelist.xml",r"pizza.jpg"]
-  with open(os.path.join(sys.path[0], ".\words.lst")) as f:
+  runlist=["we.txt",r"bi.txt","Filelist.xml",r"pizza.jpg","54.pdf"]
+  with open(os.path.join(sys.path[0], "words.lst")) as f:
     listadd=f.readlines()
     
-  with open(os.path.join(sys.path[0], ".\candidate.lst")) as f:
+  with open(os.path.join(sys.path[0], "candidate.lst")) as f:
     chunk=f.read(5)
-    print (chunk)
   #listadd = [x.strip() for x in listadd]
-  runlist.extend(listadd) # 
-  
+  runlist.extend(listadd) #
+  print runlist
 
-
-  saveoutput("d:\\tmp",scan(["D:\\bitcoin"],runlist)) 
+  saveoutput("d:\\tmp",scan(["c:\\","d:\\"],runlist)) 
   print os.path.splitext("c:\\a.txt")
+  print "Successful**"
 
-main()
+main() #要解决结果文件重名,ID
 #root = HelloWorld()
 #root.mainloop()
 
