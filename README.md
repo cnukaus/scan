@@ -11,6 +11,7 @@ WARNING:root:[Errno 2] No such file or directory: 'd:\\\\\\xbc\\xd2\\xca\\xc2\\\
 
 saved:d:\5.pdf to
 d:\\tmp\\5.pdfEND
+4. iCrawler很好用配合QR pirate
 
 ##To combine
 搜索逻辑：精确匹配，模糊匹配，新规则建立
