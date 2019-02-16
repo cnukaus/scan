@@ -1,5 +1,6 @@
 # scan
 ##To validate
+TO check other Forensic BItbucket and found 2 Git proj (QRcod)
 1. path is chinese (事unicode)
 
 2 if fileitem in D[in]: 如何克服重名（用dict). in D也是错的
