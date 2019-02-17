@@ -12,6 +12,7 @@ https://github.com/MiSecurity/x-patrol
 1. online API to store result
 2. 新文件源：iCrawler(QR-pirate)+ OCR to detect new sources
 3. Linux partitions
+4. 如都是机械硬盘或混有Flash Disk,何时适合Multithreading(读机械盘不适合4+线程并行）
 ### 远期功能：
 1. Push rules that based on blockchain file price trend/ indicated by future hot topic?
 
