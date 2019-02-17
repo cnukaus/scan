@@ -2,8 +2,10 @@
 ## bug to fix:
 fileitem in Dic[in]: 如何克服重名（用dict). in D也是错的
 ## 现在需添加功能
+Python应该启用Logger方便调错
 模糊匹配，
 规则存储改为https://github.com/UKHomeOffice/repo-security-scanner\rules\gitrob.json 格式
+https://github.com/MiSecurity/x-patrol
 ## 中期所缺功能：
 1. online API to store result
 2. 新文件源：iCrawler+ OCR to detect new sources
