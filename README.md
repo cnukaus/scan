@@ -2,6 +2,7 @@
 ### bug to fix:
 fileitem in Dic[in]: 如何克服重名（用dict). in D也是错的
 ### 现在需添加功能
+MD5存下来？
 Python应该启用Logger方便调错
 
 模糊匹配，
