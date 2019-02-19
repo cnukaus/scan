@@ -28,3 +28,10 @@ WARNING:root:[Errno 2] No such file or directory: 'd:\\\\\\xbc\\xd2\\xca\\xc2\\\
 搜索逻辑：精确匹配，
 
 hawkeye的 https://github.com/0xbug/Hawkeye 爬虫 报警功能
+https://github.com/FeeiCN/GSIL/blob/master/gsil/engine.py 扫描邮件地址并保存-考虑并行，磁盘，冲突及无趣公用邮件库：
+public_mail_services = [
+    'msg.com',
+    '126.com',
+    '139.com',
+    '163.com',
+    'qq.com',
