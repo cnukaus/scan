@@ -1,3 +1,4 @@
+Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,time domain purchased/expiry)bitdb.network; coinbase bulletin; https://dappradar.com; Bitcointalk之后是谁- 用correlation来检测
 ## Scanner of important information
 ### bug to fix:
 fileitem in Dic[in]: 如何克服重名（用dict). in D也是错的
