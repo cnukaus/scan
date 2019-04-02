@@ -1,4 +1,8 @@
 Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,time domain purchased/expiry)bitdb.network; coinbase bulletin; https://dappradar.com; Bitcointalk之后是谁- 用correlation来检测
+
+我们要寻找的是相关性，这个相关性本身如何衡量（比如是事件发生的日内价格，还是事件发生1个月后均价），至关重要，主观性尺度应该也很大。
+更容易的目标估计是预测热点或热点早期检测？
+
 ## Scanner of important information
 ### bug to fix:
 fileitem in Dic[in]: 如何克服重名（用dict). in D也是错的
