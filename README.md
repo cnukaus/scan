@@ -3,6 +3,11 @@ Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,
 我们要寻找的是相关性，这个相关性本身如何衡量（比如是事件发生的日内价格，还是事件发生1个月后均价），至关重要，主观性尺度应该也很大。
 更容易的目标估计是预测热点或热点早期检测？
 
+只能找局部规律 因全局都是政治或货币政策(BTC main jumps since 2015)的影响
+
+而这一程序可能就是自然选择所赋予我们的。生物学的经典规则不是“汝当……”，而是“如果……那么将…(so our rules should be Flexible and simple)
+
+
 ## Scanner of important information
 ### bug to fix:
 fileitem in Dic[in]: 如何克服重名（用dict). in D也是错的
