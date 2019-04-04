@@ -3,9 +3,13 @@ Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,
 我们要寻找的是相关性，这个相关性本身如何衡量（比如是事件发生的日内价格，还是事件发生1个月后均价），至关重要，主观性尺度应该也很大。
 更容易的目标估计是预测热点或热点早期检测？
 
-只能找局部规律 因全局都是政治或货币政策(BTC main jumps since 2015)的影响
+只能找局部规律和隐藏模式（场外交易） 因全局都是政治或货币政策(BTC main jumps since 2015)的影响
 
 而这一程序可能就是自然选择所赋予我们的。生物学的经典规则不是“汝当……”，而是“如果……那么将…(so our rules should be Flexible and simple)
+
+three hypotheses high correlation with national fiat collapse (2 single buyer of 20k coins; 3 price auto-action trigger 历史惊人的巧合，每当一个国家货币出现问题，就会引发比特币需求量的增加，从而成为上涨的导火索。2018年年初，委内瑞拉货币玻璃瓦尔闪崩，刺激了比特币2月份的反弹。去年7月，土耳其里拉因为土耳其政府财政问题闪崩，
+
+the two strangers met to conduct a $20k trade. (off the record market)
 
 
 ## Scanner of important information
