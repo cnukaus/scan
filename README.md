@@ -1,4 +1,9 @@
-Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,time domain purchased/expiry)bitdb.network; coinbase bulletin; https://dappradar.com; Bitcointalk之后是谁- 用correlation来检测
+Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,time domain purchased/expiry)bitdb.network; coinbase bulletin; https://dappradar.com; Bitcointalk之后是谁- 用correlation来检测.
+
+如果资金进出(quantity*price)最大，则经常tipping point.
+值钱数据：历史流入流出数据
+
+ Correlation between forks: ETC => ETH
 
 GraphQL - Etherium Name service analysis - etherium nodes, or masternode, or Privacy exposed-
 
