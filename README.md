@@ -1,7 +1,7 @@
 Other candidates: 交易所差价index; 跑路指数( lCO contract In/out token,time domain purchased/expiry)bitdb.network; coinbase bulletin; https://dappradar.com; Bitcointalk之后是谁- 用correlation来检测.
 
 如果资金进出(quantity*price)最大，则经常tipping point.
-值钱数据：历史流入流出数据
+值钱数据：历史流入流出数据-bitfinix
 
  Correlation between forks: ETC => ETH
 
@@ -14,6 +14,15 @@ GraphQL - Etherium Name service analysis - etherium nodes, or masternode, or Pri
 
 而这一程序可能就是自然选择所赋予我们的。生物学的经典规则不是“汝当……”，而是“如果……那么将…(so our rules should be Flexible and simple)
 
+## KOL:
+老大比如CZ长鹏点名，过几天会涨ZEL.
+https://github.com/bokkypoobah/BokkyPooBahsDateTimeLibrary
+
+Bokky poobah很小心,free fee exchange for 2 years, otherwise tax problematic. Not using Truffle, built own JS dev. want to build gasless contract orderPricekey = contract.getnextbestPrice(e.pairkey, buySell, orderPriceKey)
+Incubed
+
+
+ethervendingmachine.io
 three hypotheses high correlation with national fiat collapse (2 single buyer of 20k coins; 3 price auto-action trigger 历史惊人的巧合，每当一个国家货币出现问题，就会引发比特币需求量的增加，从而成为上涨的导火索。2018年年初，委内瑞拉货币玻璃瓦尔闪崩，刺激了比特币2月份的反弹。去年7月，土耳其里拉因为土耳其政府财政问题闪崩，
 
 the two strangers met to conduct a $20k trade. (off the record market)
